@@ -74,7 +74,6 @@ app.use("/campgrounds/:id/comments", commentRoutes);
 //.........................................................................................................................................
 //.........................................................................................................................................
 
-mongoose.connect(process.env.DATABASEURL || "https://ancient-garden-21657.herokuapp.com/",  {
-	useNewUrlParser: true,
-	useUnifiedTopology: true
+app.listen(process.env.PORT || "mongodb://localhost/yelp_camp", process.env.IP, function(){
+    console.log("Server started!!");
 });
