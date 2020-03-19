@@ -74,7 +74,7 @@ app.use("/campgrounds/:id/comments", commentRoutes);
 //.........................................................................................................................................
 //.........................................................................................................................................
 
-mongoose.connect(process.env.DATABASEURL || "mongodb+srv://TrusT1995:Hajat1412@cluster0-ywhp8.mongodb.net/test?retryWrites=true&w=majority",  {
+mongoose.connect(process.env.DATABASEURL || "https://ancient-garden-21657.herokuapp.com/",  {
 	useNewUrlParser: true,
 	useUnifiedTopology: true
 });
