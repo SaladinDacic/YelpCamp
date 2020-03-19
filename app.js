@@ -74,6 +74,7 @@ app.use("/campgrounds/:id/comments", commentRoutes);
 //.........................................................................................................................................
 //.........................................................................................................................................
 
-app.listen(process.env.PORT || "mongodb://localhost/yelp_camp", process.env.IP, function(){
-    console.log("Server started!!");
+mongoose.connect(process.env.DATABASEURL || "mongodb+srv://TrusT1995:Hajat1412@cluster0-ywhp8.mongodb.net/test?retryWrites=true&w=majority",  {
+	useNewUrlParser: true,
+	useUnifiedTopology: true
 });
