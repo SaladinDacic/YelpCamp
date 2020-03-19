@@ -74,7 +74,10 @@ app.use("/campgrounds/:id/comments", commentRoutes);
 //.........................................................................................................................................
 //.........................................................................................................................................
 
-mongoose.connect(process.env.DATABASEURL || "mongodb+srv://TrusT1995:Hajat1412@cluster0-ywhp8.mongodb.net/test?retryWrites=true&w=majority",  {
-	useNewUrlParser: true,
-	useUnifiedTopology: true
+var port = process.env.PORT || 3000;
+
+app.listen(port, function () {
+
+  console.log("Server Has Started!");
+
 });
