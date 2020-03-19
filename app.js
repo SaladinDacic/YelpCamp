@@ -23,7 +23,11 @@ var commentRoutes =     require("./routes/comment"),
 mongoose.connect("mongodb+srv://TrusT1995:Hajat1412@cluster0-ywhp8.mongodb.net/test?retryWrites=true&w=majority",{
     useNewUrlParser: true,
     useUnifiedTopology: true
-});
+}), function(err){
+    if(err){
+        console.log(err.message);
+    };
+};
 
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -70,6 +74,7 @@ app.use("/campgrounds/:id/comments", commentRoutes);
 //.........................................................................................................................................
 //.........................................................................................................................................
 
-app.listen(process.env.PORT || 3000, process.env.IP, function(){
-    console.log("Server started!!");
+mongoose.connect(process.env.DATABASEURL || "mongodb+srv://TrusT1995:Hajat1412@cluster0-ywhp8.mongodb.net/test?retryWrites=true&w=majority",  {
+	useNewUrlParser: true,
+	useUnifiedTopology: true
 });
