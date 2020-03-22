@@ -16,20 +16,15 @@ var commentRoutes =     require("./routes/comment"),
     indexRoutes =       require("./routes/index");
 
 
-mongoose.connect(process.env.DATABASEURL,{
+
+    
+var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp_v6"
+mongoose.connect(url,{
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
 
-/* mongoose.connect("mongodb+srv://TrusT1995:Hajat1412@cluster0-ywhp8.mongodb.net/test?retryWrites=true&w=majority",{
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-}), function(err){
-    if(err){
-        console.log(err.message);
-    };
-};
- */
+
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
