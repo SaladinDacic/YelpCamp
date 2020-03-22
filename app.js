@@ -61,6 +61,11 @@ app.use("/campgrounds/:id/comments", commentRoutes);
 
 
 
+// About ROUTE ------------
+app.get("/about", function(req, res){
+    //Get all campgrounds from DB
+    res.render("about");
+});
 
 
 //.........................................................................................................................................

@@ -5,6 +5,8 @@ body {
     background-repeat: no-repeat;
     background-position: 50% 27%;
     user-zoom: 80%;
+    font-family: "Times New Roman", Georgia, Serif;
+    
 
 }
 
@@ -17,6 +19,15 @@ body {
 .flashh{
     z-index: 1;
     position: relative;    
+}
+
+.list-group-item{
+    color: wheat;
+    background-color: #00000055;
+}
+.list-group-item.active a{
+    color: white;
+    font-size: 1.5em;
 }
 
 .lead{

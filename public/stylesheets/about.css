@@ -1,0 +1,67 @@
+body {font-family: "Times New Roman", Georgia, Serif;
+    background: url(http://i.imgur.com/K3mPv14.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.navbar-default{
+    margin: auto;
+    margin-bottom: 0;
+}
+
+h1 span{
+    opacity: 0;
+}
+
+.list-group-item{
+    color: wheat;
+    background-color: #00000075;
+}
+.list-group-item.active{
+    margin: 0;
+    padding: 0;
+}
+
+.text-3-col{
+    font-size: 1em;
+    text-align: justify;
+}
+
+.text-3-col span{
+    font-size: 1.5em;
+    text-align: justify;
+}
+
+.container{
+    
+}
+
+.imgCont{
+    color: white;
+    padding: 0 0;
+    background-color: #00000075;
+}
+.imgCont1{
+    margin-bottom: 15px;
+}
+.imgCont2{
+    padding: 0 0;
+}
+
+.bg-default2{
+    color: white;
+    background-color: #00000075;
+    padding: 2% 5%;
+}
+
+.bg-default{
+    width: 50%;
+    padding: 15px;
+}
+
+.img-default{
+    width: 50%;
+    padding: 0;
+}
