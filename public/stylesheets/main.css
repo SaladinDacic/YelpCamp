@@ -21,9 +21,11 @@ body {
     position: relative;    
 }
 
-.list-group-item{
-    color: wheat;
+.list-group-item {  
     background-color: #00000055;
+}
+.list-group-item p a{  
+    color: wheat;
 }
 .list-group-item.active a{
     color: white;

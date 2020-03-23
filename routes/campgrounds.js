@@ -61,17 +61,26 @@ router.get("/new", middleware.isLoggedIn, function(req, res){
 // SHOW ROUTE ------------- SHOW MORE INFO ABOUT CAMPGROUNDS
 router.get("/:id", function(req, res){
     //Find campground with provided ID
-    Campground.findById(req.params.id).populate("comments").exec(function(err, foundCampground){
+    Campground.find({}, function(err, allCampgrounds){
         if(err){
             console.log(err);
         }else{
-            //Render sshow template with that campground
-            res.render("campgrounds/show", {campground: foundCampground});
+            Campground.findById(req.params.id).populate("comments").exec(function(err, foundCampground){
+                if(err){
+                    console.log(err);
+                }else{
+                    //Render sshow template with that campground
+                    res.render("campgrounds/show", {campgrounds: allCampgrounds, campground: foundCampground});
+                }
+            });
         }
-    });
-    
+    }); 
     // res.send("This will be the show page inshallah"); 
 });
+
+
+
+
 
 //.........................................................................................................................................
 //.........................................................................................................................................
